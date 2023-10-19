@@ -1,10 +1,12 @@
 const express = require('express');
+const cors = require('cors');
+require('dotenv').config();
 const usersRouters = require('./routes/users');
 
 class Server {
     constructor() {
         this.app = express();   // Se instancia Express
-        this.port = 3000;       // Definimos el puerto
+        this.port = process.env.PORT;       // Definimos el puerto
 
         // Paths    http://localhost:3000/api/v1
 
@@ -15,6 +17,7 @@ class Server {
     }
 
     middleware() {
+        this.app.use(cors());
         this.app.use(express.json());    // Para porder interpretar texto en formato JSON
     }
 
@@ -29,4 +32,4 @@ class Server {
     }
 }
 
-module.exports = Server;
+module.exports = Server; 
