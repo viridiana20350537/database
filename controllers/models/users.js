@@ -47,7 +47,7 @@ const usersModel = {
               email = ?
   `, 
 
-  updateRow: `
+ updateRow: `
 UPDATE 
    Users
 SET 
