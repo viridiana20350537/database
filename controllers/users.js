@@ -121,7 +121,7 @@ const addUser = async (req = request, res = response) => {
     }
   }
 
-//incia movida    
+
 const updateUser = async (req = request, res = response) => {
   let conn;
   const {id} = req.params;

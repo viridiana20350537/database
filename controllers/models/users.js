@@ -46,8 +46,8 @@ const usersModel = {
           WHERE
               email = ?
   `, 
-//movi aqui
-updateRow: `
+
+  updateRow: `
 UPDATE 
    Users
 SET 
