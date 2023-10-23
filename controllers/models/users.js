@@ -61,8 +61,8 @@ SET
     is_active = ?
 WHERE
     id = ?
-`,
-
+`,  
+//fin
   deleteRow: `
       UPDATE 
           Users
